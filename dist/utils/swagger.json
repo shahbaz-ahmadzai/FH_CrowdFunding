@@ -1,0 +1,447 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Crowd Fund",
+        "version": "v1"
+    },
+    "paths": {
+        "/api/crowdFund/details/{id}": {
+            "get": {
+                "tags": [
+                    "crowdFund"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Project"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Project"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Project"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/crowdFund/NumerOfSponsors/{ProjectId}": {
+            "get": {
+                "tags": [
+                    "crowdFund"
+                ],
+                "parameters": [
+                    {
+                        "name": "ProjectId",
+                        "in": "path",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/totalSponsors"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/totalSponsors"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/totalSponsors"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/crowdFund/getTotalGrant/{ProjectId}/": {
+            "get": {
+                "tags": [
+                    "crowdFund"
+                ],
+                "parameters": [
+                    {
+                        "name": "ProjectId",
+                        "in": "path",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/totalFund"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/totalFund"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/totalFund"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/crowdFund/availablePledges/{ProjectId}": {
+            "get": {
+                "tags": [
+                    "crowdFund"
+                ],
+                "parameters": [
+                    {
+                        "name": "ProjectId",
+                        "in": "path",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Pledge"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Pledge"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Pledge"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/crowdFund/ListFunds/{ProjectId}": {
+            "get": {
+                "tags": [
+                    "crowdFund"
+                ],
+                "parameters": [
+                    {
+                        "name": "ProjectId",
+                        "in": "path",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Fund"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Fund"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Fund"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/crowdFund/availableFundByPledge/{PledgeId}": {
+            "get": {
+                "tags": [
+                    "crowdFund"
+                ],
+                "parameters": [
+                    {
+                        "name": "PledgeId",
+                        "in": "path",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Fund"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Fund"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Fund"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/crowdFund/FundingOptions/{ProjectId}": {
+            "get": {
+                "tags": [
+                    "crowdFund"
+                ],
+                "parameters": [
+                    {
+                        "name": "ProjectId",
+                        "in": "path",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PledgeOptions"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PledgeOptions"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PledgeOptions"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/crowdFund/fund/{ProjectId}/{PledgeId}": {
+            "post": {
+                "tags": [
+                    "crowdFund"
+                ],
+                "parameters": [
+                    {
+                        "name": "ProjectId",
+                        "in": "path",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "PledgeId",
+                        "in": "path",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FundRequest"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FundRequest"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FundRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Fund"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Fund"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Fund"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Project": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "target": {
+                        "type": "integer"
+                    },
+                    "remainingTime": {
+                        "type": "integer"
+                    },
+                    "status": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Fund": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "description": {
+                        "type": "string"
+                    }
+                }
+            },
+            "FundRequest": {
+                "type": "object",
+                "properties": {
+                    "amount": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                }
+            },
+            "PledgeOptions": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Pledge": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "integer"
+                    },
+                    "amount": {
+                        "type": "string"
+                    },
+                    "projectId": {
+                        "type": "string"
+                    }
+                }
+            },
+            "totalFund": {
+                "type": "object",
+                "properties": {
+                    "totalFund": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                }
+            },
+            "totalSponsors": {
+                "type": "object",
+                "properties": {
+                    "totalSponsors": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                }
+            }
+        },
+        "securitySchemes": {
+            "Bearer": {
+                "type": "http",
+                "description": "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+                "scheme": "bearer"
+            }
+        }
+    },
+    "security": [
+        {
+            "Bearer": [
+                "Bearer"
+            ]
+        }
+    ]
+}
